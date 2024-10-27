@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Smiths</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>The Smiths</h1>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/77/The_Smiths_Logo.PNG" alt="Logo The Smiths" class="logo">
+        <h2>História</h2>
+        <p>The Smiths foi uma banda britânica formada em Manchester em 1982. Composta por Morrissey e Johnny Marr, eles se tornaram ícones do rock alternativo. Os críticos consideram a banda como sendo a mais importante banda de rock alternativo a surgir nos anos 1980. A banda assinou contrato com a Rough Trade Records, pela qual eles lançaram quatro álbuns, várias coletâneas e diversos singles. Embora alcançando pouco sucesso comercial fora do Reino Unido durante os seus anos de atividade, a banda conquistou grande sucesso nos anos decorrentes, mantendo-se nas prateleiras das lojas até os dias de hoje. A banda encerrou suas atividades em 1987, nunca vindo a se reunir novamente. NME nomeou os Smiths como "artistas mais influentes de sempre" em uma votação de 2002.</p>
+
+        <h3> 
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY7SLUTQOw1nOmmURLvZmJApbM-dToDU_emg&s" alt="Imagem da banda The Smiths">
+        </h3>
+        <a href="outro.html"><button>Abrir Discografia</button></a>
+        <a href="audio-player.html"><button>Abrir Reprodutor de Áudio</button></a>
+
+        <h2>Comentários</h2>
+        <form id="comentarioForm">
+            <input type="text" id="nome" placeholder="Seu Nome" required>
+            <textarea id="comentario" placeholder="Seu Comentário" required></textarea>
+            <button type="submit">Enviar Comentário</button>
+        </form>
+
+        <h3>Comentários Anteriores:</h3>
+        <ul id="comentariosList">
+            <!-- Comentários serão carregados aqui via JavaScript -->
+        </ul>
+    </div>
+
+    <script>
+        // Função para salvar comentários no Local Storage
+        function salvarComentarios(comentarios) {
+            localStorage.setItem("comentarios", JSON.stringify(comentarios));
+        }
+
+        // Função para carregar comentários do Local Storage
+        function carregarComentarios() {
+            const comentarios = localStorage.getItem("comentarios");
+            return comentarios ? JSON.parse(comentarios) : [];
+        }
+
+        // Função para adicionar comentário na lista e salvar
+        function adicionarComentario(nome, comentario) {
+            const comentariosList = document.getElementById("comentariosList");
+            
+            const novoComentario = document.createElement("li");
+            novoComentario.innerHTML = `<strong>${nome}</strong>: ${comentario}`;
+            comentariosList.appendChild(novoComentario);
+        }
+
+        // Função para carregar e exibir os comentários armazenados
+        function exibirComentarios() {
+            const comentarios = carregarComentarios();
+            comentarios.forEach(comentario => adicionarComentario(comentario.nome, comentario.comentario));
+        }
+
+        // Evento para adicionar um novo comentário ao enviar o formulário
+        document.getElementById("comentarioForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            const nome = document.getElementById("nome").value.trim();
+            const comentario = document.getElementById("comentario").value.trim();
+
+            if (nome && comentario) {
+                // Adicionar comentário na interface
+                adicionarComentario(nome, comentario);
+
+                // Salvar no Local Storage
+                const comentarios = carregarComentarios();
+                comentarios.push({ nome, comentario });
+                salvarComentarios(comentarios);
+
+                // Limpar campos
+                document.getElementById("nome").value = "";
+                document.getElementById("comentario").value = "";
+            }
+        });
+
+        // Carregar e exibir comentários ao carregar a página
+        window.addEventListener("load", exibirComentarios);
+    </script>
+</body>
+</html>

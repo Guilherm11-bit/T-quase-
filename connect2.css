@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #d3d3d3;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #282828;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #ffcc00;
+    margin-bottom: 1rem;
+}
+
+img {
+    display: block;
+    margin: 0 auto 2rem;
+    max-width: 100%;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #ffcc00;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e6b800;
+}
+
+/* Styles for comments section */
+.comments-section {
+    margin-top: 2rem;
+}
+
+.comments-section h3 {
+    font-size: 1.5rem;
+    color: #ffcc00;
+    margin-bottom: 1rem;
+}
+
+.comment {
+    background-color: #3b3b3b;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s;
+}
+
+.comment:hover {
+    background-color: #444;
+}
+
+.comment strong {
+    color: #ffcc00;
+}
+
+.comment p {
+    margin-top: 0.5rem;
+    color: #d3d3d3;
+}

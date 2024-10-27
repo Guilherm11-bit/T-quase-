@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discografia do The Smiths</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .album-button {
+            cursor: pointer;
+            background-color: #2f2e2e;
+            border: none;
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+        }
+        .album-image {
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Discografia do The Smiths</h1>
+        <h2>Álbuns de estúdio</h2>
+        <ul>
+            <li><button class="album-button" onclick="showImage('https://upload.wikimedia.org/wikipedia/pt/thumb/9/9a/The_Smiths_album.jpg/220px-The_Smiths_album.jpg')">The Smiths (1984)</button></li>
+            <li><button class="album-button" onclick="showImage('https://i.scdn.co/image/ab67616d0000b273ac345598e7697a319cb5b460')">Meat Is Murder (1985)</button></li>
+            <li><button class="album-button" onclick="showImage('https://upload.wikimedia.org/wikipedia/pt/7/7e/The_Queen_is_Dead.jpg')">The Queen Is Dead (1986)</button></li>
+            <li><button class="album-button" onclick="showImage('https://upload.wikimedia.org/wikipedia/pt/5/5e/Strangeways_here_we_come.jpg')">Strangeways, Here We Come (1987)</button></li>
+        </ul>
+        <h2>Álbuns ao vivo</h2>
+        <ul>
+            <li><button class="album-button" onclick="showImage('https://upload.wikimedia.org/wikipedia/en/e/e1/SmithsRank.jpg')">Rank (1988)</button></li>
+        </ul>
+        <h2>Compilações</h2>
+        <ul>
+            <li><button class="album-button" onclick="showImage('hatful_of_hollow.jpg')">Hatful of Hollow (1984)</button></li>
+            <li><button class="album-button" onclick="showImage('https://upload.wikimedia.org/wikipedia/en/8/85/TWWL.jpg')">The World Won't Listen (1987)</button></li>
+            <li><button class="album-button" onclick="showImage(https://upload.wikimedia.org/wikipedia/en/6/65/UKBest1.jpg)">Best... I (1992)</button></li>
+            <li><button class="album-button" onclick="showImage('https://m.media-amazon.com/images/I/71p3BSbtpIL._UF894,1000_QL80_.jpg')">Best... II (1992)</button></li>
+            <li><button class="album-button" onclick="showImage('https://upload.wikimedia.org/wikipedia/en/4/4b/SmithsSingles.jpg')">Singles (1995)</button></li>
+            <li><button class="album-button" onclick="showImage('https://m.media-amazon.com/images/I/513B30PXMRL._UF894,1000_QL80_.jpg')">The Very Best of The Smiths (2001)</button></li>
+        </ul>
+        <h2>Singles</h2>
+        <ul>
+            <li><button class="album-button" onclick="showImage('https://upload.wikimedia.org/wikipedia/en/0/07/Handin.gif')">Hand in Glove (1983)</button></li>
+            <li><button class="album-button" onclick="showImage('https://i.scdn.co/image/ab67616d0000b2733f7ae6e9a1ff1a07f2b52825')">This Charming Man (1984)</button></li>
+            <li><button class="album-button" onclick="showImage('https://tracksrio.com.br/web/image/product.template/843/image_1024?unique=8329ed9')">What Difference Does It Make? (1984)</button></li>
+            <li><button class="album-button" onclick="showImage('https://akamai.sscdn.co/uploadfile/letras/albuns/0/8/6/2/1539381682601243.jpg')">Heaven Knows I'm Miserable Now (1984)</button></li>
+            <li><button class="album-button" onclick="showImage(https://akamai.sscdn.co/letras/360x360/albuns/b/0/8/0/1757331682516329.jpg')">William, It Was Really Nothing (1984)</button></li>
+            <li><button class="album-button" onclick="showImage('https://upload.wikimedia.org/wikipedia/en/b/b1/Smithshowsoonisnow.jpg')">How Soon Is Now? (1985)</button></li>
+            <li><button class="album-button" onclick="showImage('https://upload.wikimedia.org/wikipedia/en/b/b6/Shakespearessister.gif)">Shakespeare's Sister (1985)</button></li>
+            <li><button class="album-button" onclick="showImage('https://upload.wikimedia.org/wikipedia/en/thumb/1/1c/Bigmouth_Strikes_Again.jpg/220px-Bigmouth_Strikes_Again.jpg')">Bigmouth Strikes Again (1986)</button></li>
+            <li><button class="album-button" onclick="showImage('https://upload.wikimedia.org/wikipedia/en/thumb/d/d0/Thornsmiths.gif/220px-Thornsmiths.gif')">The Boy with the Thorn in His Side (1985)</button></li>
+            <li><button class="album-button" onclick="showImage('https://upload.wikimedia.org/wikipedia/en/thumb/b/bc/Thereisalight.jpg/220px-Thereisalight.jpg')">There Is a Light That Never Goes Out (1986)</button></li>
+            <li><button class="album-button" onclick="showImage('https://upload.wikimedia.org/wikipedia/en/a/a5/Panic_The_Smiths.jpg')">Panic (1986)</button></li>
+            <li><button class="album-button" onclick="showImage('https://upload.wikimedia.org/wikipedia/en/a/a0/Asksmiths.gif')">Ask (1986)</button></li>
+            <li><button class="album-button" onclick="showImage('https://upload.wikimedia.org/wikipedia/en/3/3c/Shoplifterssmiths.gif')">Shoplifters of the World Unite (1987)</button></li>
+            <li><button class="album-button" onclick="showImage('https://upload.wikimedia.org/wikipedia/en/c/ca/Girlfriend_in_a_Coma.png')">Girlfriend in a Coma (1987)</button></li>
+            <li><button class="album-button" onclick="showImage('https://upload.wikimedia.org/wikipedia/en/0/0e/I_Started_Something_I_Couldn%27t_Finish_single_cover.png')">I Started Something I Couldn't Finish (1987)</button></li>
+            <li><button class="album-button" onclick="showImage('https://akamai.sscdn.co/uploadfile/letras/albuns/0/6/7/3/1539511682601264.jpg')">Last Night I Dreamt Somebody Loves Me (1987)</button></li>
+        </ul>
+        <img id="albumImage" class="album-image" src="" alt="Imagem do álbum">
+    </div>
+    <script>
+        function showImage(image) {
+            const img = document.getElementById('albumImage');
+            img.src = image;
+            img.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

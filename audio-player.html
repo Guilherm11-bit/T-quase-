@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reprodutor de Áudio</title>
+    <link rel="stylesheet" href="styleaudio.css">
+</head>
+<body>
+    <div class="audio-player">
+        <!-- Imagem da Capa do Álbum -->
+        <div id="album-cover-container">
+            <img id="album-cover" src="Back to the old house.jpg" alt="Capa do Álbum">
+        </div>
+
+        <!-- Controle de áudio -->
+        <audio id="audio" controls></audio>
+
+        <!-- Duração e tempo da faixa -->
+        <div id="controls">
+            <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+        </div>
+
+        <h2>Lista de Faixas</h2>
+        <ul id="track-list">
+            <li>
+                <button class="track" 
+                        data-src="audio-file-1.mp3" 
+                        data-cover="Asleep.jpg" 
+                        data-lyrics="Letra da música Asleep">
+                    Asleep
+                </button>
+            </li>
+            <li>
+                <button class="track" 
+                        data-src="audio-file-2.mp3" 
+                        data-cover="The_Queen_is_Dead.jpg" 
+                        data-lyrics="Letra da música 'Bigmouth Strikes Again'...">
+                    Bigmouth Strikes Again
+                </button>
+            </li>
+            <li>
+                <button class="track" 
+                        data-src="audio-file-3.mp3" 
+                        data-cover="Back to the old house.jpg" 
+                        data-lyrics="Letra da música 'Back to the Old House'...">
+                    Back to the Old House
+                </button>
+            </li>
+        </ul>
+
+        <!-- Container para exibir a letra da música -->
+        <div id="lyrics-container">
+            <h3>Letra da Música</h3>
+            <div id="lyrics"></div>
+        </div>
+    </div>
+    
+    <a href="index.html"><button>Voltar para a Página Principal</button></a>
+
+    <script src="Java1.js"></script>
+</body>
+</html>
